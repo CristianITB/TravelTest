@@ -1,6 +1,7 @@
 import SingleUserDataDisplayer from '../SingleUserDataDisplayer'
 import { Frame, InsertUsers, NumberOfUsers, AddUsersButton } from './styles'
 import { useState } from 'react'
+import { apiData } from '../../helpers/api.helper'
 
 export const UsersDataDisplayer = ({ usersData }) => {
   const [numberOfUsers, setNumberOfUsers] = useState(0)
@@ -19,6 +20,25 @@ export const UsersDataDisplayer = ({ usersData }) => {
 
   return (
     <Frame>
+
+      {/*
+      {apiData.map((user, index) => {
+        return (
+          <SingleUserDataDisplayer
+            key={index}
+            userFirstName={user.results[index].name.first}
+            userLastName={user.results[index].name.last}
+            userEmail={user.results[index].email}
+            userImage={user.results[index].picture.medium}
+          />
+        )
+      })}
+    */}
+
+      <div>
+        <h1>{apiData.name.first} {apiData.name.last}</h1>
+        <p>{apiData.email}</p>
+      </div>
       <InsertUsers>
         <NumberOfUsers>Number of current users: {numberOfUsers}...Do you want more?</NumberOfUsers>
         <AddUsersButton onClick={modifyUsersList}>Add User</AddUsersButton>
