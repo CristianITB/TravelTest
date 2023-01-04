@@ -4,7 +4,11 @@ import { withTheme } from '../../helpers/styles.helper'
 export const Frame = styled.div`
   display: flex;
   flex-direction: row;
-  ${withTheme('margin', 'sizes.rem07')}
+  ${withTheme('margin', 'sizes.rem07')};
+  ${withTheme('margin-left', 'sizes.rem15')};
+  border: 2px solid black;
+  width: 25%;
+  padding: 0.5rem;
 `
 
 export const UserInfo = styled.div`
