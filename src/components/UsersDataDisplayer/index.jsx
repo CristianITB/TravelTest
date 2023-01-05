@@ -1,10 +1,10 @@
 import SingleUserDataDisplayer from '../SingleUserDataDisplayer'
-import { Frame, TravelportLogo, InsertUsers, NumberOfUsers, AddUsersButton } from './styles'
+import { Frame, TravelportLogo, InsertUsers, NumberOfUsers, AddUsersButton, SingleUsersContainer } from './styles'
 import { useState } from 'react'
 import { App } from '../../helpers/api.helper'
 import travelportLogo from './resources/images/Travelport-Logo.png'
 
-const baseURL = 'https://randomuser.me/api?results=5'
+const baseURL = 'https://randomuser.me/api?results=25'
 
 export const UsersDataDisplayer = () => {
   const usersDataFromApi = App(baseURL)
@@ -28,11 +28,13 @@ export const UsersDataDisplayer = () => {
         <NumberOfUsers>Number of current users: {numberOfUsers}... Do you want more? Then click</NumberOfUsers>
         <AddUsersButton onClick={modifyUsersList}>Add User</AddUsersButton>
       </InsertUsers>
-      {usersDataListState.map((user, index) => {
-        return (
-          <SingleUserDataDisplayer key={index} userFirstName={user.name.first} userLastName={user.name.last} userEmail={user.email} userImage={user.picture.medium} />
-        )
-      })}
+      <SingleUsersContainer>
+        {usersDataListState.map((user, index) => {
+          return (
+            <SingleUserDataDisplayer key={index} userFirstName={user.name.first} userLastName={user.name.last} userEmail={user.email} userImage={user.picture.medium} />
+          )
+        })}
+      </SingleUsersContainer>
     </Frame>
   )
 }

@@ -17,6 +17,7 @@ export const UserInfo = styled.div`
   justify-content: center;
   align-items: center;
   ${withTheme('padding', 'sizes.rem0625')}
+  ${withTheme('margin-left', 'sizes.rem1')}
 `
 
 export const UserImage = styled.img`

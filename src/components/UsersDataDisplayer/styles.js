@@ -2,11 +2,6 @@ import styled from '@emotion/styled'
 import { withTheme } from '../../helpers/styles.helper'
 
 export const Frame = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 43.75rem;
-  flex-wrap: wrap;
-  width: 100%;
 `
 
 export const InsertUsers = styled.div`
@@ -17,7 +12,6 @@ export const InsertUsers = styled.div`
 export const NumberOfUsers = styled.p`
   ${withTheme('margin', 'sizes.rem15')};
   ${withTheme('font-size', 'sizes.rem12')};
-
 `
 
 export const AddUsersButton = styled.button`
@@ -34,4 +28,12 @@ export const TravelportLogo = styled.img`
   ${withTheme('margin', 'sizes.rem1')};
   ${withTheme('padding-bottom', 'sizes.rem1')};
   border-bottom: 5px solid black;
+`
+
+export const SingleUsersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 43.75rem;
+  flex-wrap: wrap;
+  width: 100%;
 `
