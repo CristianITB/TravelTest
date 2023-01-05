@@ -25,7 +25,7 @@ export const UsersDataDisplayer = () => {
     <Frame>
       <TravelportLogo src={travelportLogo} alt='Travelport Logo' />
       <InsertUsers>
-        <NumberOfUsers>Number of current users: {numberOfUsers}...Do you want more? Then click</NumberOfUsers>
+        <NumberOfUsers>Number of current users: {numberOfUsers}... Do you want more? Then click</NumberOfUsers>
         <AddUsersButton onClick={modifyUsersList}>Add User</AddUsersButton>
       </InsertUsers>
       {usersDataListState.map((user, index) => {

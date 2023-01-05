@@ -4,10 +4,9 @@ import { withTheme } from '../../helpers/styles.helper'
 export const Frame = styled.div`
   display: flex;
   flex-direction: column;
-
-  // width: '100px';
-  // height: '100px';
-  // background-image: url('https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg');
+  height: 43.75rem;
+  flex-wrap: wrap;
+  width: 100%;
 `
 
 export const InsertUsers = styled.div`
@@ -17,7 +16,8 @@ export const InsertUsers = styled.div`
 
 export const NumberOfUsers = styled.p`
   ${withTheme('margin', 'sizes.rem15')};
-  font-size: 1.1rem;
+  ${withTheme('font-size', 'sizes.rem12')};
+
 `
 
 export const AddUsersButton = styled.button`

@@ -7,8 +7,8 @@ export const Frame = styled.div`
   ${withTheme('margin', 'sizes.rem07')};
   ${withTheme('margin-left', 'sizes.rem15')};
   border: 2px solid black;
-  width: 25%;
-  padding: 0.5rem;
+  width: 21.875rem;
+  ${withTheme('padding', 'sizes.rem05')};
 `
 
 export const UserInfo = styled.div`
