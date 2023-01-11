@@ -26,7 +26,7 @@ export const UsersDataDisplayer = () => {
       <TravelportLogo src={travelportLogo} alt='Travelport Logo' />
       <InsertUsers>
         <NumberOfUsers>Number of current users: {numberOfUsers}... Do you want more? Then click</NumberOfUsers>
-        <AddUsersButton onClick={modifyUsersList}>Add User</AddUsersButton>
+        <AddUsersButton onClick={modifyUsersList} data-testid='addUserButton'>Add User</AddUsersButton>
       </InsertUsers>
       <SingleUsersContainer>
         {usersDataListState.map((user, index) => {
